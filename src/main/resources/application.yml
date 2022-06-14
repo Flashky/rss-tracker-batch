@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: rss-tracker-batch
+  batch:
+    job:
+      # Do not start job on startup
+      # Use Scheduled instead
+      enabled: false 
+  data:
+    mongodb:
+      authentication-database: admin
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:27017}
+      database: ${MONGODB_DATABASE:rss_tracker_db}
+      username: ${MONGODB_USERNAME:admin}
+      password: ${MONGODB_PASSWORD:admin}
+
+fixed-delay:
+  seconds: ${JOB_FIXED_DELAY_SECONDS:30}
+  
+bot:
+  token: ${TELEGRAM_BOT_TOKEN}
