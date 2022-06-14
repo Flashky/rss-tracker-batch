@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "fixed-delay.seconds",
+    "type": "java.lang.String",
+    "description": "A description for 'fixed-delay.seconds'"
+  },
+  {
+    "name": "bot.token",
+    "type": "java.lang.String",
+    "description": "A description for 'bot.token'"
+  }
+]}
