@@ -95,4 +95,4 @@ docker run --name rss-tracker-batch --env-file .env -dp 8081:8081 flashk/rss-tra
 
 ### Docker Compose
 
-Pending. WIP
+See [rss-tracker-app](https://github.com/Flashky/rss-tracker-app) repository.
