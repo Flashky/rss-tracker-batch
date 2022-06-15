@@ -18,6 +18,10 @@ import org.springframework.batch.core.repository.JobExecutionAlreadyRunningExcep
 import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException;
 import org.springframework.batch.core.repository.JobRestartException;
 
+import com.flashk.bots.rsstracker.test.utils.Util;
+
+import ch.qos.logback.classic.Level;
+
 @ExtendWith(MockitoExtension.class)
 class JobSchedulerTest {
 
@@ -30,6 +34,7 @@ class JobSchedulerTest {
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		Util.setTestingLogLevel(Level.OFF);
 	}
 
 	@BeforeEach
