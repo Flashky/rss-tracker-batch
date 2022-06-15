@@ -32,6 +32,7 @@ import com.rometools.rome.feed.synd.SyndEntryImpl;
 import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.feed.synd.SyndFeedImpl;
 
+import ch.qos.logback.classic.Level;
 import uk.co.jemos.podam.api.PodamFactory;
 import uk.co.jemos.podam.api.PodamFactoryImpl;
 
@@ -59,7 +60,7 @@ class FeedEntityItemProcessorTest {
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		
-		Util.disablePodamLogs();
+		Util.setTestingLogLevel(Level.OFF);
 		
 	    podamFactory = new PodamFactoryImpl();
 	    podamFactory.getStrategy().setDefaultNumberOfCollectionElements(TOTAL_ITEMS);
