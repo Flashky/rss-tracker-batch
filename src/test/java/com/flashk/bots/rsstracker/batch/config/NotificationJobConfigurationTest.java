@@ -19,7 +19,6 @@ import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.repository.support.SimpleJobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.core.step.tasklet.TaskletStep;
-import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.data.MongoItemReader;
 import org.springframework.data.mongodb.MongoTransactionManager;
 
