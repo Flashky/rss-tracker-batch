@@ -8,14 +8,15 @@ import ch.qos.logback.classic.Logger;
 public class Util {
 
 	public static final void setTestingLogLevel(Level level) {
-		
-		 Logger root = (Logger) LoggerFactory.getLogger("uk.co.jemos.podam.api");
-	     root.setLevel(level);
-	     
-	     root = (Logger) LoggerFactory.getLogger("com.flashk.bots.rsstracker");
-	     root.setLevel(level);
+		setTestingLogLevel("uk.co.jemos.podam.api", level);
+		setTestingLogLevel("com.flashk.bots.rsstracker", level);
+		setTestingLogLevel("com.openpojo", level);
 	}
 	
+	private static void setTestingLogLevel(String name, Level level) {
+		Logger root = (Logger) LoggerFactory.getLogger(name);
+		root.setLevel(level);
+	}
 	private Util() {}
 	
 }
