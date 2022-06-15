@@ -22,6 +22,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import com.flashk.bots.rsstracker.repositories.entities.FeedEntity;
 import com.flashk.bots.rsstracker.repositories.entities.ItemEntity;
 import com.flashk.bots.rsstracker.services.util.FeedReader;
+import com.flashk.bots.rsstracker.test.utils.Util;
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.response.SendResponse;
 import com.rometools.rome.feed.synd.SyndContent;
@@ -35,7 +36,6 @@ import uk.co.jemos.podam.api.PodamFactory;
 import uk.co.jemos.podam.api.PodamFactoryImpl;
 
 @ExtendWith(MockitoExtension.class)
-@SuppressWarnings("unchecked")
 class FeedEntityItemProcessorTest {
 
 	private static final int NO_ITEMS = 0;
@@ -58,6 +58,8 @@ class FeedEntityItemProcessorTest {
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		
+		Util.disablePodamLogs();
 		
 	    podamFactory = new PodamFactoryImpl();
 	    podamFactory.getStrategy().setDefaultNumberOfCollectionElements(TOTAL_ITEMS);
