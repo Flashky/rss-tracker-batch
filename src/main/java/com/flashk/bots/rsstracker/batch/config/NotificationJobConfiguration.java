@@ -69,14 +69,8 @@ public class NotificationJobConfiguration {
 	}
 
 	@Bean
-	public NotificationJobConfiguration jobExecutionListener() {
-		return new NotificationJobConfiguration();
-	}
-
-	@Bean
-	public Job job(Step step, NotificationJobConfiguration jobExecutionListener) {
+	public Job job(Step step) {
 		return jobBuilderFactory.get("process_new_feed_items")
-				.listener(jobExecutionListener)
 				.flow(step)
 				.end()
 				.build();
