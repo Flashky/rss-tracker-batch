@@ -10,7 +10,7 @@ ENV MONGODB_PORT "27017"
 ENV MONGODB_USERNAME "admin"
 ENV MONGODB_PASSWORD "admin"
 ENV MONGODB_DATABASE "rss_tracker_db"
-ENV JOB_FIXED_DELAY "60"
+ENV JOB_FIXED_DELAY_SECONDS "60"
 
 # Application entrypoint
 CMD ["java", "-jar", "/app/rss-tracker-batch.jar"]
