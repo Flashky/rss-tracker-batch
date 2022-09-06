@@ -41,11 +41,6 @@ public class FeedEntity {
 	private String title;
 	
 	/**
-	 * RSS feed description field
-	 */
-	private String description;
-	
-	/**
 	 * RSS feed link field.
 	 */
 	private String link;

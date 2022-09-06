@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
+import org.jsoup.Jsoup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
@@ -56,9 +57,8 @@ public class FeedEntityItemProcessor implements ItemProcessor<FeedEntity, FeedEn
 			SyndEntry entry = entries.next();
 			
 			ItemEntity item = new ItemEntity();
-			item.setTitle(entry.getTitle());
+			item.setTitle(cleanHtml(entry.getTitle()));
 			item.setLink(entry.getLink());
-			item.setDescription(entry.getDescription().getValue());
 			
 			// Stop processing the feed when finding the first already notified item
 			if(notifiedItems.contains(item)) {
@@ -96,6 +96,10 @@ public class FeedEntityItemProcessor implements ItemProcessor<FeedEntity, FeedEn
 		SendMessage message = new SendMessage(feedEntity.getTelegram().getChatId(), formatedMessage).parseMode(ParseMode.HTML).disableNotification(false);
 
 		return bot.execute(message);
+	}
+	
+	private String cleanHtml(String html) {
+		return (html == null) ? null : Jsoup.parse(html).text();
 	}
 	
 }
