@@ -193,21 +193,8 @@ class FeedEntityItemProcessorTest {
 		SyndEntry entry = new SyndEntryImpl();
 		entry.setTitle(itemEntity.getTitle());
 		entry.setLink(itemEntity.getLink());
-		entry.setDescription(manufactureSyndContentPojo(itemEntity.getDescription()));
 		
 		return entry;
-	}
-
-	/**
-	 * Builds a SyndContent using the input description as example.
-	 * @param description the description to copy from.
-	 * @return
-	 */
-	private SyndContent manufactureSyndContentPojo(String description) {
-		SyndContent content = new SyndContentImpl();
-		content.setValue(description);
-		
-		return content;
 	}
 
 	private SyndFeed manufactureSyndFeedPojo(int itemsNumber) {

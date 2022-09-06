@@ -13,7 +13,6 @@ public class ItemEntity {
 	// At least one of these fields must exist.
 	private String title;
 	private String link;
-	private String description;
 
 	@Override
 	public int hashCode() {

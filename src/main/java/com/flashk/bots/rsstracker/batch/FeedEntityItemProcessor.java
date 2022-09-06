@@ -58,7 +58,6 @@ public class FeedEntityItemProcessor implements ItemProcessor<FeedEntity, FeedEn
 			ItemEntity item = new ItemEntity();
 			item.setTitle(entry.getTitle());
 			item.setLink(entry.getLink());
-			item.setDescription(entry.getDescription().getValue());
 			
 			// Stop processing the feed when finding the first already notified item
 			if(notifiedItems.contains(item)) {
