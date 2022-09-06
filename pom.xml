@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.flashk.bots.rsstracker</groupId>
 	<artifactId>rss-tracker-batch</artifactId>
-	<version>0.1.1</version>
+	<version>0.2.0</version>
 	<name>rss-tracker-batch</name>
 	<description>Batch notifications for RSS Tracker Bot</description>
 	<properties>
@@ -77,6 +77,12 @@
   			<version>6.0.1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.15.3</version>
+		</dependency>
+		
 		<!--  Testing dependencies -->
 		
 		<dependency>
