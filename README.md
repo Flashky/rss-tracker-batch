@@ -16,6 +16,9 @@ Property | Description | Default value
 ``MONGODB_PASSWORD`` | The MongoDB password | ``admin`` **(*)**
 ``MONGODB_DATABASE`` | The MongoDB database | ``rss_tracker_db``
 ``JOB_FIXED_DELAY_SECONDS`` | The delay in seconds between job executions | ``60``
+``ADMIN_SERVER_USERNAME`` | (Optional) Username to login at the admin server | ``admin`` **(*)**
+``ADMIN_SERVER_PASSWORD`` | (Optional) Password to login at the admin server | ``admin`` **(*)**
+``ADMIN_SERVER_URL`` | (Optional) Admin server URL | ``http://localhost:9090``
 
 ***:** *It is highly recommended to change both default username and password.*
 
