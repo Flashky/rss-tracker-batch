@@ -1,7 +1,7 @@
 # rss-tracker-batch
 [![Build & Report](https://github.com/Flashky/rss-tracker-batch/actions/workflows/build-report.yml/badge.svg)](https://github.com/Flashky/rss-tracker-batch/actions/workflows/build-report.yml)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/cf1b5cdba7aa4ceeb9021f1166312b9d)](https://www.codacy.com/gh/Flashky/rss-tracker-batch/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Flashky/rss-tracker-batch&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/cf1b5cdba7aa4ceeb9021f1166312b9d)](https://www.codacy.com/gh/Flashky/rss-tracker-batch/dashboard?utm_source=github.com&utm_medium=referral&utm_content=Flashky/rss-tracker-batch&utm_campaign=Badge_Coverage)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/fbc88a54cea5400b9722805227eb7baf)](https://www.codacy.com/gh/Flashky/rss-tracker-batch/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Flashky/rss-tracker-batch&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/fbc88a54cea5400b9722805227eb7baf)](https://www.codacy.com/gh/Flashky/rss-tracker-batch/dashboard?utm_source=github.com&utm_medium=referral&utm_content=Flashky/rss-tracker-batch&utm_campaign=Badge_Coverage)
 
 ## Configuration properties
 
@@ -16,6 +16,9 @@ Property | Description | Default value
 ``MONGODB_PASSWORD`` | The MongoDB password | ``admin`` **(*)**
 ``MONGODB_DATABASE`` | The MongoDB database | ``rss_tracker_db``
 ``JOB_FIXED_DELAY_SECONDS`` | The delay in seconds between job executions | ``60``
+``ADMIN_SERVER_USERNAME`` | (Optional) Username to login at the admin server | ``admin`` **(*)**
+``ADMIN_SERVER_PASSWORD`` | (Optional) Password to login at the admin server | ``admin`` **(*)**
+``ADMIN_SERVER_URL`` | (Optional) Admin server URL | ``http://localhost:9090``
 
 ***:** *It is highly recommended to change both default username and password.*
 
