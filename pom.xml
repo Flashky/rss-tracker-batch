@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.flashk.bots.rsstracker</groupId>
 	<artifactId>rss-tracker-batch</artifactId>
-	<version>0.4.0-SNAPSHOT</version>
+	<version>0.4.0</version>
 	<name>rss-tracker-batch</name>
 	<description>Batch notifications for RSS Tracker Bot</description>
 	<properties>
