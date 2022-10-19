@@ -11,6 +11,11 @@ ENV MONGODB_USERNAME "admin"
 ENV MONGODB_PASSWORD "admin"
 ENV MONGODB_DATABASE "rss_tracker_db"
 ENV JOB_FIXED_DELAY_SECONDS "60"
+ENV EUREKA_SERVER_HOST "localhost"
+ENV EUREKA_SERVER_PORT "8761"
+ENV EUREKA_SERVER_USERNAME "admin"
+ENV EUREKA_SERVER_PASSWORD "admin"
+
 
 # Application entrypoint
 CMD ["java", "-jar", "/app/rss-tracker-batch.jar"]
